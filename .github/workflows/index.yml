@@ -1,0 +1,28 @@
+name: List Files
+
+on: [push]
+
+jobs:
+  list-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: List Files
+        run: |
+          pip install requests
+          python index.py
+
+      - name: Commit files list
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add files_list.json
+          git commit -m "Update files list"
+          git push
