@@ -2,10 +2,9 @@ import requests
 import json
 from datetime import datetime
 
-def list_files(owner, repo, token):
+def list_files(owner, repo):
     url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/master?recursive=1"
-    headers = {'Authorization': f'token {token}'}
-    response = requests.get(url, headers=headers)
+    response = requests.get(url)
     tree = response.json().get('tree', [])
 
     files = {}
@@ -20,11 +19,10 @@ def list_files(owner, repo, token):
     return files
 
 def main():
-    owner = 'GITHUB_OWNER'  # Replace with GitHub repository owner
-    repo = 'GITHUB_REPO'    # Replace with GitHub repository name
-    token = 'GITHUB_TOKEN'  # Replace with a GitHub token
+    owner = 'Project-EAUploader'
+    repo = 'EAUploader-Content-Delivery'
 
-    files = list_files(owner, repo, token)
+    files = list_files(owner, repo)
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     result = {
@@ -32,7 +30,7 @@ def main():
         'files': files
     }
 
-    with open('files_list.json', 'w') as f:
+    with open('index.json', 'w') as f:
         json.dump(result, f, indent=4)
 
 if __name__ == '__main__':
