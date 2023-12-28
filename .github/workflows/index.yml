@@ -23,6 +23,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add files_list.json
-          git commit -m "Update files list"
-          git push
+          git add .
+          git commit -m "Update from GitHub Action"
+          git push https://${{ secrets.INDEX_SECRET_TOKEN }}@github.com/username/repository.git HEAD:main
