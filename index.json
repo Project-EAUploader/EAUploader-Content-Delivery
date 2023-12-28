@@ -1,22 +1,19 @@
 {
+    "version": "1.0.1",
+    "remove": [
+    ],
     "updates": [
       {
-        "version": "1.0.1",
-        "remove": [],
-        "updates": [
-            {
-            "path": "Packages/com.sabuworks.eauploader/Editor/EALibrary/Articles/EAUploader/ja/SDK1/Content.txt",
-            "url": "EALibrary/ja/SDK1/Content.txt"
-            },
-            {
-            "path": "Packages/com.sabuworks.eauploader/Editor/Resources/Message/ja/100.txt",
-            "url": "Messages/ja/100.txt"
-            },
-            {
-            "path": "Packages/com.sabuworks.eauploader/Editor/Resources/Translation/translations_ja.json",
-            "url": "Translation/translations_ja.json"
-            }
-        ]
+        "path": "Packages/com.sabuworks.eauploader/Editor/EALibrary/Articles/EAUploader/ja/SDK1/Content.txt",
+        "url": "EALibrary/ja/SDK1/Content.txt"
+      },
+      {
+        "path": "Packages/com.sabuworks.eauploader/Editor/Resources/Message/ja/100.txt",
+        "url": "Messages/ja/100.txt"
+      },
+      {
+        "path": "Packages/com.sabuworks.eauploader/Editor/Resources/Translation/translations_ja.json",
+        "url": "Translation/translations_ja.json"
       }
     ]
   }
