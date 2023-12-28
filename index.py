@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 
 def list_files(owner, repo):
-    url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/master?recursive=1"
+    url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/main?recursive=1"
     response = requests.get(url)
     tree = response.json().get('tree', [])
 
