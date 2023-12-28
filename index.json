@@ -3,7 +3,7 @@
       {
         "version": "1.0.1",
         "remove": [],
-        "update": [
+        "updates": [
             {
             "path": "Packages/com.sabuworks.eauploader/Editor/EALibrary/Articles/EAUploader/ja/SDK1/Content.txt",
             "url": "EALibrary/ja/SDK1/Content.txt"
